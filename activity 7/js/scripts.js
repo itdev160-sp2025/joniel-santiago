@@ -58,7 +58,7 @@ function completeTask (event) {
     var taskEl = event.target;
     var id = taskEl.id;
 
-    
+
     // Find corresponding task in tasks array and update status
     for (var i = 0; i < tasks.length; i++) {
         if (tasks [i].id === id) {
@@ -90,7 +90,7 @@ function init () {
     document.getElementById('active-list').onclick = completeTask;
 
     // (OPTIONAL) Wire up the task input key press handler
-    document.getElementById('input-task').onkeypress = clickButton;
+    document.getElementById('input-task').addEventListener(keydown, clickButton);
 }
 
 init();
