@@ -13,7 +13,7 @@ var data = [
     downloads: 15629344,
     stars: 122,
     price: 'Free',
-    selector: 'p1',
+    selector: 'p1'
 },
 {
     name: 'emmet',
@@ -23,7 +23,7 @@ var data = [
     downloads: 1662209,
     stars: 2534,
     price: 10.50,
-    selector: 'p2',
+    selector: 'p2'
 },
 ];
 
@@ -68,6 +68,12 @@ var getEl = function (id) {
     return document.getElementById(id);
 };
 
+/**
+ * Write's the package object's data to the appropriate
+ * DOM elements utilzing the package selector property.
+ * @param {Package} package  // Package object
+ * @param {void}
+ */
 
 var writePackageInfo = function(package) {
     // Get reference to DOM elements
@@ -89,8 +95,7 @@ var writePackageInfo = function(package) {
     priceEl.textContent = package.price;
     downloadEl.textContent = package.getFormattedDownloads();
     starsEl.textContent = package.stars.getFormattedStars();
-
-};
+}
 /**
  * Utilize package data and constuctor objects to 
  * Construct each package, then write it to the page.
@@ -108,8 +113,8 @@ var init = function() {
     var pathI = new Package(data[0]);
     writePackageInfo(pathI);
 
-    var rainbow = new Package(data[1]);
-    writePackageInfo(rainbow);
+    var emmet = new Package(data[1]);
+    writePackageInfo(emmet);
 
     // It will continue with a couple more packages.... OR
     // Write packages with for loop 
@@ -117,7 +122,7 @@ var init = function() {
     //  var package = new Package(data[i]);
     //  writePackageInfo(package);
     // }
-};
+}
 
 init();
 // this will call the init funtion to run the script
