@@ -94,7 +94,7 @@ var writePackageInfo = function(package) {
     urlEL.textContent = package.url;
     priceEl.textContent = package.price;
     downloadEl.textContent = package.getFormattedDownloads();
-    starsEl.textContent = package.stars.getFormattedStars();
+    starsEl.textContent = package.getFormattedStars();
 }
 /**
  * Utilize package data and constuctor objects to 
